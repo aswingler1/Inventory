@@ -4,7 +4,8 @@
 
 using std::string;
 using std::ostream;
-  
+
+//constructor
 Inventory::Inventory(string name, float price, int count)
 {
   m_name = name;
@@ -12,6 +13,7 @@ Inventory::Inventory(string name, float price, int count)
   m_in_stock = count;
 }
 
+//function to sell. returns false if no inventory; true if there is and decriments the inventory by 1
 bool Inventory::sell()
 {
 	if(m_in_stock >= 1)

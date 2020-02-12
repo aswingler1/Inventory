@@ -5,6 +5,9 @@
 using std::string;
 using std::ostream;
 
+/* this class has the private variables to keep track of inventory and 
+   price as well as the functions to check that and sell cupcakes
+*/
 class Inventory
 {
   private:
