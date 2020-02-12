@@ -8,7 +8,7 @@ using std::string;
 int main()
 {
   char choice = 'q';
-  Inventory stock("Cupcake",2.99,100);
+  Inventory stock("Cupcake",2.99,3);
 
   do
   {
@@ -16,8 +16,14 @@ int main()
     cin>>choice;
     if( choice == 'S' || choice == 's' )
     {
-      stock.sell();
-      cout<<stock<<"\n";
+      if(stock.sell())
+      {
+        cout<<stock<<"\n";
+      }
+      else
+      {
+        cout<<"No more cupcakes in stock :(\n";
+      }
     }
   }while( choice != 'q' && choice != 'Q');
 

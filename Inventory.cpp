@@ -12,9 +12,17 @@ Inventory::Inventory(string name, float price, int count)
   m_in_stock = count;
 }
 
-void Inventory::sell()
+bool Inventory::sell()
 {
-  m_in_stock--;
+	if(m_in_stock >= 1)
+	{
+		m_in_stock--;
+		return true;
+	}	
+  	else
+  	{
+  		return false;
+  	}
 }
 
 ostream& operator<<(ostream& stream, const Inventory& item)
